@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="screenShareApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Screen Sharing and Screenshot</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="app.js"></script>
+</head>
+<body ng-controller="ScreenShareController as ctrl">
+
+<button ng-click="ctrl.startSharing()">Share Screen</button>
+<button ng-click="ctrl.stopSharing()">Stop Sharing</button>
+<button ng-click="ctrl.captureScreen()">Capture Screenshot</button>
+
+<video id="sharedScreen" autoplay style="display: none;"></video>
+<img id="screenshotImg" alt="Screenshot will appear here..." style="max-width: 100%; border: 1px solid #000;">
+
+</body>
+</html>
